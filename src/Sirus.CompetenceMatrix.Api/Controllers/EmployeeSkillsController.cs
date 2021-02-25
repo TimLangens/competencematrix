@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sirus.CompetenceMatrix.Api.Controllers
 {
-    [Route(Routes.Default)]
+    [Route(Routes.Employees + "skills")]
     [ApiController]
     [ApiVersion("1.0")]
     public class EmployeeSkillsController : ControllerBase

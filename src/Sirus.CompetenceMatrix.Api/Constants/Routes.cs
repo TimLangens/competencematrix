@@ -2,7 +2,8 @@
 {
     public class Routes
     {
-        public const string Default = "api/[controller]";
+        public const string Default = "/api/[controller]";
+        public const string Employees = "/api/employees/{employeeId}/";
         public const string HealthCheck = "/api/healthcheck";
         public const string Error = "/error";
         public const string FullError = "/full-error";

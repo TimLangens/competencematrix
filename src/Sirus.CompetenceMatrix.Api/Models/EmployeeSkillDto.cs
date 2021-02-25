@@ -2,7 +2,6 @@
 {
     public class EmployeeSkillDto 
     {
-        public string Id { get; set; }
         public EmployeeDto Employee { get; set; }
         public SkillDto Skill { get; set; }
         public int Level { get; set; }

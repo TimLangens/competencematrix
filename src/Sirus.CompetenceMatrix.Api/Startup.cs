@@ -19,15 +19,15 @@ namespace Sirus.CompetenceMatrix.Api
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider versionProvider)
         {
-            if (env.IsDevelopment())
+            if (env.IsProduction())
+            {
+                app.UseExceptionHandler(Routes.Error);
+            }
+            else
             {
                 app.UseDeveloperExceptionPage();
                 app.UseOpenApiSpec(versionProvider);
                 app.UseExceptionHandler(Routes.FullError);
-            }
-            else
-            {
-                app.UseExceptionHandler(Routes.Error);
             }
 
             app.UseHttpsRedirection();

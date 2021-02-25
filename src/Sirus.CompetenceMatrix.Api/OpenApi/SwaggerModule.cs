@@ -12,7 +12,10 @@ namespace Sirus.CompetenceMatrix.Api.OpenApi
     {
         internal static void AddOpenApiSpec(this IServiceCollection services)
         {
-            services.AddVersionedApiExplorer();
+            services.AddVersionedApiExplorer(o =>
+            {
+                o.SubstituteApiVersionInUrl = true;
+            });
             services.AddApiVersioning(o =>
             {
                 o.ReportApiVersions = true;
